@@ -1,0 +1,113 @@
+/* code-editor.component.css */
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Dropdown styles */
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Button styles */
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Style the dropdown arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Customize the appearance of the dropdown arrow */
+select::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+
+/* Container for the code editor */
+.code-editor-container {
+  display: flex;
+  border: 1px solid #ddd;
+  background-color: #1a0c0c;
+  height: 450px;
+}
+
+/* Left side (input) */
+.editor-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Right side (output) */
+.editor-output {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Textareas for code input and output */
+textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Styling for code input */
+.code-input {
+  background-color: #1a1212;
+  color: white;
+}
+
+/* Styling for code output */
+.code-output {
+  background-color: #1a1717;
+  color: white;
+}
+
+
+/* Highlight line numbers in the code editor (optional) */
+.code-editor-container::before {
+  content: attr(data-line-numbers);
+  display: block;
+  float: left;
+  text-align: right;
+  border-right: 1px solid #ddd;
+  color: #aaa;
+}
+
+/* Highlight active line (optional) */
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}

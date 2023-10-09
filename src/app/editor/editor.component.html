@@ -1,0 +1,25 @@
+<!-- code-converter.component.html -->
+
+<nav class="navbar">
+  <div class="dropdown">
+    <!-- Dropdown for selecting target language -->
+    <select [(ngModel)]="selectedLanguage" id="languageDropdown">
+      <option value="javascript">JavaScript</option>
+      <option value="java">Java</option>
+      <option value="python">Python</option>
+      <option value="cpp">C++</option>
+    </select>
+  </div>
+  <button class="convert-button" (click)="convertCode()">Convert</button>
+  <button class="debug-button" (click)="debugCode()">Debug</button>
+  <button class="quality-button" (click)="qualityCheck()">Quality Check</button>
+</nav>
+
+<div class="code-editor-container">
+  <div class="editor-input">
+    <textarea [(ngModel)]="inputCode" class="code-input" placeholder="Enter your code here"></textarea>
+  </div>
+  <div class="editor-output">
+    <textarea [(ngModel)]="outputCode" class="code-output" readonly placeholder="Output will be displayed here"></textarea>
+  </div>
+</div>
